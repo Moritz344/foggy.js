@@ -1,0 +1,10 @@
+{
+
+				"dataToDisplay": {
+								"temp": true,
+								"time": true,
+								"humidity": true,
+								"weather": true
+				}
+
+}
