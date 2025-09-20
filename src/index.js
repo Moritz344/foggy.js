@@ -124,9 +124,9 @@ async function sendRequestAndGetData(city) {
 				let weatherDesc = weatherCodes[weatherData[0].weather];
 
 			const colorschemePink = `
-  \x1b[36m  Weather   ${weatherDesc}
+  \x1b[35m  Weather   ${weatherDesc}
   \x1b[35m  Temp      ${temp}
-  \x1b[36m  Time      ${timeString}
+  \x1b[35m  Time      ${timeString}
   \x1b[35m  Humidity  ${weatherData[0].humidity}%
 				`
 			const colorschemeGruvbox = `
