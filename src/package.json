@@ -1,9 +1,9 @@
 {
   "name": "weather",
   "version": "1.0.0",
-  "description": "",
+  "description": "my personal and minimal weather cli tool with minimal dependencies.",
   "license": "ISC",
-  "author": "",
+  "author": "Moritz Maier",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {

@@ -4,10 +4,11 @@
 								"temp": true,
 								"time": true,
 								"humidity": true,
-								"weather": true
+								"weather": true,
+								"windSpeed":true
 				},
 				"settings": {
-								"colorscheme": "pink",
+								"colorscheme": "standard",
 								"colorschemes":[
 												"pink",
 												"yellow",

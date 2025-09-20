@@ -108,6 +108,7 @@ async function sendRequestAndGetData(city) {
 				let { lat, long } = await getCityData(city);
 				let data = await getWeatherData(lat,long);
 
+				console.log(data);
 				let timeString = new Date();
 				timeString = timeString.getHours() + ":" +  timeString.getMinutes()
 
@@ -115,6 +116,7 @@ async function sendRequestAndGetData(city) {
 								...(settings.dataToDisplay.temp ? { temp: data.current["temperature_2m"] } : {} ),
 								...(settings.dataToDisplay.humidity? { humidity: data.current["relative_humidity_2m"] } : {}),
 								...(settings.dataToDisplay.weather? { weather: data.current["weathercode"] } : {}),
+								...(settings.dataToDisplay.windSpeed? { windSpeed: data.current["wind_speed_10m"] } : {}),
 				}];
 
 				var temp = weatherData[0].temp;
@@ -124,24 +126,27 @@ async function sendRequestAndGetData(city) {
 				let weatherDesc = weatherCodes[weatherData[0].weather];
 
 			const colorschemePink = `
-  \x1b[35m  Weather   ${weatherDesc}
-  \x1b[35m  Temp      ${temp}
+  \x1b[35m  Weather   ${weatherDesc} 
+  \x1b[35m  Temp      ${temp}        
+  \x1b[35m  Wind      ${weatherData[0].windSpeed * 3,6} km/h
   \x1b[35m  Time      ${timeString}
-  \x1b[35m  Humidity  ${weatherData[0].humidity}%
+  \x1b[35m  Humidity  ${weatherData[0].humidity}% 
 				`
 			const colorschemeGruvbox = `
   \x1b[38;5;223m  Weather   ${weatherDesc}
   \x1b[38;5;223m  Temp      ${temp}
+  \x1b[38;5;223m  Wind      ${weatherData[0].windSpeed * 3,6} km/h
   \x1b[38;5;223m  Time      ${timeString}
-  \x1b[38;5;223m  Humidity  ${weatherData[0].humidity}%
 				`
 
-			const colorschemeStandard = `
-  Weather   ${weatherDesc}
-  Temp      ${temp}
-  Time      ${timeString}
-  Humidity  ${weatherData[0].humidity}%
-				`
+			const colorschemeStandard =  `
+    Weather   ${weatherDesc} 
+    Time      ${timeString}
+    Temp      ${temp}
+    Wind      ${weatherData[0].windSpeed * 3,6} km/h
+    Humidity  ${weatherData[0].humidity}%
+				` 
+
 
 				if (weatherDesc.includes("rain") ) {
 								console.log(asciiWeather[61]);
