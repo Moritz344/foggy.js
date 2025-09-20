@@ -5,6 +5,20 @@
 								"time": true,
 								"humidity": true,
 								"weather": true
+				},
+				"settings": {
+								"colorscheme": "pink",
+								"colorschemes":[
+												"pink",
+												"yellow",
+												"standard"
+								],
+								"temperatureScale": "°C",
+								"temperatureScales": [
+												"°C",
+												"F",
+												"K"
+								]
 				}
 
 }

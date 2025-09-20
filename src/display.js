@@ -71,6 +71,7 @@ const asciiWeather = {
 };
 
 
+
 module.exports = {
 				asciiWeather,
 				weatherCodes
