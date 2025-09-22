@@ -1,6 +1,5 @@
 # ☁️ foggy.js
-<img width="1610" height="879" alt="foggy" src="https://github.com/user-attachments/assets/85c4867c-d36e-46e3-8649-7f5115c7276e" />
-
+<img width="1677" height="843" alt="foggy_4" src="https://github.com/user-attachments/assets/5bc7b956-464c-4c26-8e4d-1ce3480a6eca" />
 
 # Description
 my personal and minimal weather cli tool with minimal dependencies. 
