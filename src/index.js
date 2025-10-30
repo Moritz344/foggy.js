@@ -108,7 +108,6 @@ async function sendRequestAndGetData(city) {
 				let { lat, long } = await getCityData(city);
 				let data = await getWeatherData(lat,long);
 
-				console.log(data);
 				let timeString = new Date();
 				timeString = timeString.getHours() + ":" +  timeString.getMinutes()
 
